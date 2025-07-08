@@ -1,5 +1,5 @@
 # Magic Mirror
-A smart mirror is an innovative device that integrates a reflective surface with a digital display, providing real-time information such as weather updates and news. 
+A smart mirror is an innovative device that integrates a reflective surface with a digital display, providing real-time information such as weather updates and news. This incorporate the use of a mirror with the usefull features of electronic devices.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|

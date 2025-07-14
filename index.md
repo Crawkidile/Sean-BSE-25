@@ -13,7 +13,6 @@ A smart mirror is an innovative device that integrates a reflective surface with
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eRlc9itsqys?si=54tGyHwXDZxcFkUZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
@@ -25,10 +24,6 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
 - Technical details of what you've accomplished and how they contribute to the final goal
 - What has been surprising about the project so far
@@ -37,9 +32,7 @@ For your second milestone, explain what you've worked on since your previous mil
 
 # First Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eRlc9itsqys?si=54tGyHwXDZxcFkUZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 My project is the MagicMirror, which combines the use of a mirror with a personal assistant. The initial components that I used were a Raspberry Pi 4, which is used to power the Mirror, and a 7" LCD Screen, to display it on. The LCD Screen connects to the Raspberry Pi via an HDMI connection. So far, I managed to install the MagicMirror Operating System on the Raspberry Pi itself, with both Node.js and npm. I also managed to connect the Pi to the screen and have customized the display to include useful information such as the weather, the time, and CPU information.
 

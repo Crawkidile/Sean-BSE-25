@@ -1,5 +1,5 @@
 # Magic Mirror
-A smart mirror is an innovative device that integrates a reflective surface with a digital display, providing real-time information such as weather updates and news. It also provides extensive customization opportunities, allowing you to display all sorts of information. This incorporates the use of a mirror with the usefull features of electronic devices.
+A smart mirror is an innovative device that integrates a reflective surface with a digital display, providing real-time information such as weather updates and news. It also provides extensive customization opportunities, allowing you to display all sorts of information. This incorporates the use of a mirror with the useful features of electronic devices.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -11,7 +11,7 @@ A smart mirror is an innovative device that integrates a reflective surface with
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+**Don't forget to replace the text below with the embedding for your milestone video. Go to YouTube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 
 For your final milestone, explain the outcome of your project. Key details to include are:
@@ -30,20 +30,27 @@ For your second milestone, explain what you've worked on since your previous mil
 - Technical details of what you've accomplished and how they contribute to the final goal
 - What has been surprising about the project so far
 - Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+- What needs to be completed before your final milestone
+
+For my second milesotne, I polished many of the customizations/modules, and added a couple more features to it such as System information, air quality and more. By getting the base project itself done, as well as the majority of the customization stage complete, I can move on to the modification phase, in which I plan to incorporate motion-sensing capabilities, and a bigger display.
+
+There were some previous challenges that I faced with the modules. Some were due to incompatibility issues, while others were just small errors within the modules themselves. I managed to resolve most of the issues/challenges I ran into; however, a few just seemed like they were non-functioning modules that I wouldn't be able to use (such as the `MMM-Touch` module in combination with the `MMM-pages` module). However, in the end, it was still fine, as I was able to customize my mirror/display accordingly. I encourage others who pick this project to experiment with these modules and look for possible solutions, as it would be great to find ways to resolve these issues.
+
+For my final milestone, I plan to complete the assembly process of the modifications to my project and fully incorporate them. At this point, I am in a good place, with the base project being completed and customized to my liking.
+
 
 # First Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eRlc9itsqys?si=54tGyHwXDZxcFkUZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-My project is the MagicMirror, which combines the use of a mirror with a personal assistant. The initial components that I used were a Raspberry Pi 4, which is used to power the Mirror, and a 7" LCD Screen, to display it on. The LCD Screen connects to the Raspberry Pi via an HDMI connection. So far, I managed to install the MagicMirror Operating System on the Raspberry Pi itself, with both Node.js and npm. I also managed to connect the Pi to the screen and have customized the display to include useful information such as the weather, the time, and CPU information.
+My project is the MagicMirror, which combines the use of a mirror with a personal assistant. The initial components that I used were a Raspberry Pi 4, which is used to power the Mirror, and a 7" LCD Screen, to display it on. The LCD Screen connects to the Raspberry Pi via an HDMI connection. So far, I managed to install the MagicMirror Operating System on the Raspberry Pi itself, with both Node.js and npm. I also managed to connect the Pi to the screen, and I plan to customize the display to include useful information such as the weather, the time, and CPU information.
 
 One challenge that I faced arose when I tried to use the `MMM-Touch` module, as it seemed that even though the display came with touchscreen capabilities, the module wouldn't receive or recognize any of the inputs I gave (by touching the screen). I decided to just go through without using `MMM-Touch`, as there were other modules that also used touch-recognition that worked fine. I plan to try and experiment with it a little more in future milestones; however, for now, I am at a good place.
 
 I plan to add at least a couple of modifications to my MagicMirror, such as motion sensing capabilities, Bluetooth, and possibly more.
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resources to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 

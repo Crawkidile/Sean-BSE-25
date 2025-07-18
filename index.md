@@ -24,13 +24,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="Callie&#39;s Second Milestone - Typing Robot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rblOZdZI_U8?si=xVBpD-ZP1toW5N28" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For my second milesotne, I polished many of the customizations/modules, and added a couple more features to it such as System information, air quality and more. By getting the base project itself done, as well as the majority of the customization stage complete, I can move on to the modification phase, in which I plan to incorporate motion-sensing capabilities, and a bigger display.
 
@@ -272,6 +266,9 @@ And here is the `./css/custom.css` file (can be used for further customizing the
 | Raspberry Pi 4 Starter Kit | Power's the display for the smart mirror | $96.99 | <a href="https://www.amazon.com/RasTech-Raspberry-Starter-Heatsink-Screwdriver/dp/B0C8LV6VNZ"> Link </a> |
 | (7") LCD Display | Used for displaying the MagicMirror | $45.99 | <a href="https://www.amazon.com/Hosyond-Display-1024%C3%97600-Capacitive-Raspberry/dp/B09XKC53NH/"> Link </a> |
 | Wireless Keyboard and Mouse | (Optional) Used to interact with the Raspberry Pi directly without having to go through SSH / navigating the mirror directly | $29.99 | <a href="https://www.amazon.com/Logitech-MK270-Wireless-Keyboard-Mouse/dp/B079JLY5M5"> Link </a> |
+| 10.525 GHz microwave motion sensor | Motion sensor used to detect motion (and automate the mirror) | $15.99 | <a href="https://www.amazon.com/CQRobot-10-525GHz-Microwave-Compatible-Measurement/dp/B089NKGWQQ/">Link</a> |
+| Raspberry Pi. 10.1 in. Screen Monitor | Bigger screen for more accessibility | $69.99 | <a herf="https://www.amazon.com/dp/B0987468N2/">Link</a> |
+
 
 # Other Resources
 - [MagicMirror Docs/Guide](https://docs.magicmirror.builders/)

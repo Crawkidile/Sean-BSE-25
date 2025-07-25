@@ -11,16 +11,15 @@ A smart mirror is an innovative device that integrates a reflective surface with
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to YouTube, click Share -> Embed, and copy and paste the code to replace what's below.**
+Since my previous milestone, I managed to succesfully install and use the new 10.1" Screen Display, as well as incorporate the PIR motion sensor. Not only was I able to incorporate these modifications, but also I managed to use the motion sensor in a way that it can control the display's on/off state.
 
+My biggest challenges with this project were probably trying to look for a case that would work with my setup, and also the installation process. I spent hours trying to search the internet to find a case that would work, but came up empty-handed. I had to resort to CAD software, which was my backup for if I couldn't find a case, however I believe this was a better option, as it allowed me to have complete customization over the case itself, and make it to my needs. 
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+Additionally, early on, I ran into a couple of issues when installing the MagicMirror OS onto my Raspberry Pi, as the Node.js version was incompatable with the setup program itself. Thankfully, there was a relatively simple solution by just installing Node.js manually.
 
+BSE was very beneficial to me, as I gained an even better understanding of the implementation of programming with real electrical devices, as well as a better understanding of how different microcontrollers and embedded systems work. This project also showed me how there are so many different opportunities for customization and modifications on your prototype, and that it's up to you to create new innovative ideas.
 
+I hope to continue growing my understanding of these topics, as well as gain more experience in working with both the hardware and software/programming sides of engineering. All in all, Bluestamp taught me many great lessons and practices to use, and I hope to grow even more.
 
 # Second Milestone
 
@@ -28,7 +27,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 For my second milesotne, I polished many of the customizations/modules, and added a couple more features to it such as System information, air quality and more. By getting the base project itself done, as well as the majority of the customization stage complete, I can move on to the modification phase, in which I plan to incorporate motion-sensing capabilities, and a bigger display.
 
-There were some previous challenges that I faced with the modules. Some were due to incompatibility issues, while others were just small errors within the modules themselves. I managed to resolve most of the issues/challenges I ran into; however, a few just seemed like they were non-functioning modules that I wouldn't be able to use (such as the `MMM-Touch` module in combination with the `MMM-pages` module). However, in the end, it was still fine, as I was able to customize my mirror/display accordingly. I encourage others who pick this project to experiment with these modules and look for possible solutions, as it would be great to find ways to resolve these issues.
+There were some previous challenges that I faced with the modules. Some were due to incompatibility issues, while others were just small errors within the modules themselves. I managed to resolve most of the issues/challenges I ran into; however, a few just seemed like they were non-functioning modules that I wouldn't be able to use (such as the `MMM-Touch` module in combination with the `MMM-pages` module). However, in the end, it was still fine, as I was able to customize my mirror/display accordingly. I encourage others who pick this project to experiment with these modules and look for possible solutions, as it would be great to find ways to resolve these issues. I also installed `pm2`, which is a JavaScript-based process manager, which allows for easy automation/startup of the MagicMirror Program.
 
 For my final milestone, I plan to complete the assembly process of the modifications to my project and fully incorporate them. At this point, I am in a good place, with the base project being completed and customized to my liking.
 
@@ -92,6 +91,52 @@ let config = {
 
 	modules: [
 		{
+			module: "MMM-Remote-Control",
+			config: {}
+		},
+		{
+			module: "MMM-Pir",
+			position: "top_center",
+			config: {
+				Display: {
+					style: 2,
+					mode: 3,
+				},
+				Pir: {
+					gpio: 23,
+					triggerMode: "H",
+				},
+				Cron: {
+					mode: 3,
+					ON: [
+						// Turn on Monday through Friday at 6:00 AM
+						{
+							dayOfWeek: [1, 2, 3, 4, 5],
+							hour: 6,
+							minute: 0,
+						},
+						// Turn on Saturday and Sunday at 7:00 AM
+						{
+							dayOfWeek: [0, 6],
+							hour: 7,
+							minute: 0,
+						}
+					],
+					OFF: [
+						// Turn off every day at 10:15 PM
+						{
+							dayOfWeek: [0, 1, 2, 3, 4, 5, 6],
+							hour: 22,
+							minute: 15,
+						},
+					],
+				},
+				Touch: {
+					mode: 3
+				},
+			}	
+		},
+		{
 			module: "alert",
 			positition: "top_bar",
 		},
@@ -103,7 +148,7 @@ let config = {
 			module: "clock",
 			position: "top_left"
 		},
-		{
+/* 		{
 			module: "calendar",
 			header: "US Holidays",
 			position: "top_left",
@@ -116,7 +161,7 @@ let config = {
 					}
 				]
 			}
-		},
+		}, */
 		{
 			module: "MMM-Pollen",
 			position: "top_left",
@@ -149,7 +194,7 @@ let config = {
 				lon: -73.98366785585593
 			}
 		},
-		{
+		/* {
 			module: 'MMM-AQI',
 			position: 'top_right',
 			header: 'Air Quality Index (AQI)',
@@ -162,8 +207,8 @@ let config = {
 				animationSpeed: 1000,
 				debug: false
 			}
-		},
-		{
+		}, */
+		/* {
 			module: "MMM-PiTemp",
 			position: "bottom_right",
 			config: {
@@ -172,7 +217,7 @@ let config = {
 				low: 158,
 				label: "CPU: "
 			}
-		},
+		}, */
 		{
 			module: "MMM-HideAll",
 			position: "bottom_left",
@@ -258,6 +303,65 @@ And here is the `./css/custom.css` file (can be used for further customizing the
 }
 ```
 
+I added more automation to the startup process of the MagicMirror via the following below:
+
+I added the following to my `~/.bashrc` file (which is the file that runs on startup of the Pi:
+```bash
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+```
+I also created an additional file in my home directory named `.bash_functions` in which I defined custom functions for launching the MagicMirror:
+```bash
+#!/bin/bash
+
+function startmm() {
+    { #try
+        pm2 start ~/mm.sh
+    } || { #catch
+        echo "Error starting MagicMirror. Please check the logs."
+        exit 1
+    }
+}
+
+function stopmm() {
+    { #try
+        pm2 stop ~/mm.sh
+    } || { #catch
+        echo "Error stopping MagicMirror. Please check the logs."
+        exit 1
+    }
+}
+
+function restartmm() {
+    { #try
+        pm2 restart ~/mm.sh
+    } || { #catch
+        echo "Error restarting MagicMirror. Please check the logs."
+        exit 1
+    }
+}
+
+function reloadmm() {
+    { #try
+        pm2 reload ~/mm.sh
+    } || { #catch
+        echo "Error reloading MagicMirror. Please check the logs."
+        exit 1
+    }
+}
+
+function activate_venv() {
+    source ~/.venv/bin/activate
+}
+
+function deactivate_venv() {
+    deactivate
+}
+```
+
+
+
 
 # Bill of Materials
 
@@ -266,7 +370,7 @@ And here is the `./css/custom.css` file (can be used for further customizing the
 | Raspberry Pi 4 Starter Kit | Power's the display for the smart mirror | $96.99 | <a href="https://www.amazon.com/RasTech-Raspberry-Starter-Heatsink-Screwdriver/dp/B0C8LV6VNZ"> Link </a> |
 | (7") LCD Display | Used for displaying the MagicMirror | $45.99 | <a href="https://www.amazon.com/Hosyond-Display-1024%C3%97600-Capacitive-Raspberry/dp/B09XKC53NH/"> Link </a> |
 | Wireless Keyboard and Mouse | (Optional) Used to interact with the Raspberry Pi directly without having to go through SSH / navigating the mirror directly | $29.99 | <a href="https://www.amazon.com/Logitech-MK270-Wireless-Keyboard-Mouse/dp/B079JLY5M5"> Link </a> |
-| 10.525 GHz microwave motion sensor | Motion sensor used to detect motion (and automate the mirror) | $15.99 | <a href="https://www.amazon.com/CQRobot-10-525GHz-Microwave-Compatible-Measurement/dp/B089NKGWQQ/"> Link </a> |
+| (5Pcs) HC-SR501 PIR Motion Sensor | Motion sensor used to detect motion (and manipulate the mirror display state) | $8.99 | <a href="https://www.amazon.com/WWZMDiB-HC-SR501-Exclusive-Raspberry-Electronic/dp/B0CCF3HYT9/"> Link </a> |
 | Raspberry Pi. 10.1 in. Screen Monitor | Bigger screen for more accessibility | $69.99 | <a href="https://www.amazon.com/dp/B0987468N2/"> Link </a> |
 
 

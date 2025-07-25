@@ -5,8 +5,6 @@ A smart mirror is an innovative device that integrates a reflective surface with
 |:--:|:--:|:--:|:--:|
 | Sean A | Leonia High School | Electrical Engineering | Incoming Junior |
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
-
 ![Headstone Image](IMG_2669.jpeg)
 
 # Final Milestone
@@ -27,9 +25,9 @@ I hope to continue growing my understanding of these topics, as well as gain mor
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rblOZdZI_U8?si=xVBpD-ZP1toW5N28" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For my second milesotne, I polished many of the customizations/modules, and added a couple more features to it such as System information, air quality and more. By getting the base project itself done, as well as the majority of the customization stage complete, I can move on to the modification phase, in which I plan to incorporate motion-sensing capabilities, and a bigger display.
+For my second milestone, I polished many of the customizations/modules and added a couple more features to it, such as System information, air quality, and more. By getting the base project itself done, as well as the majority of the customization stage complete, I can move on to the modification phase, in which I plan to incorporate motion-sensing capabilities and a bigger display.
 
-There were some previous challenges that I faced with the modules. Some were due to incompatibility issues, while others were just small errors within the modules themselves. I managed to resolve most of the issues/challenges I ran into; however, a few just seemed like they were non-functioning modules that I wouldn't be able to use (such as the `MMM-Touch` module in combination with the `MMM-pages` module). However, in the end, it was still fine, as I was able to customize my mirror/display accordingly. I encourage others who pick this project to experiment with these modules and look for possible solutions, as it would be great to find ways to resolve these issues. I also installed `pm2`, which is a JavaScript-based process manager, which allows for easy automation/startup of the MagicMirror Program.
+I previously faced some challenges with the modules. Some were due to incompatibility issues, while others were just small errors within the modules themselves. I managed to resolve most of the issues/challenges I ran into; however, a few just seemed like they were non-functioning modules that I wouldn't be able to use (such as the `MMM-Touch` module in combination with the `MMM-pages` module). However, in the end, it was still fine, as I was able to customize my mirror/display accordingly. I encourage others who pick this project to experiment with these modules and look for possible solutions, as it would be great to find ways to resolve these issues. I also installed `pm2` on my Pi, which is a JavaScript-based process manager that allows for easy automation/startup of the MagicMirror Program.
 
 For my final milestone, I plan to complete the assembly process of the modifications to my project and fully incorporate them. At this point, I am in a good place, with the base project being completed and customized to my liking.
 
@@ -102,6 +100,10 @@ let config = {
 					mode: 3,
 				},
 				Pir: {
+					/// HC-SR501 PIR Motion Sensor Information
+					/// GND - Pin 9 (BOARD)
+					/// VCC - Pin 2 (BOARD)
+					/// OUT - Pin 16 (BOARD) / Pin 23 (BCM)
 					gpio: 23,
 					triggerMode: "H",
 				},

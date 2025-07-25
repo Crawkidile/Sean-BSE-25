@@ -8,8 +8,10 @@ A smart mirror is an innovative device that integrates a reflective surface with
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
 ![Headstone Image](IMG_2669.jpeg)
-  
+
 # Final Milestone
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gzTWQ_Vz5Ec?si=cIwCwm37H_TQqw8V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Since my previous milestone, I managed to succesfully install and use the new 10.1" Screen Display, as well as incorporate the PIR motion sensor. Not only was I able to incorporate these modifications, but also I managed to use the motion sensor in a way that it can control the display's on/off state.
 

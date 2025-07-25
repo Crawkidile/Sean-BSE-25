@@ -3,7 +3,7 @@ A smart mirror is an innovative device that integrates a reflective surface with
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Sean A | Leonia High School | Electrical Engineering | Incoming Junior |
+| Sean A | Leonia High School | Electrical & Computer Engineering | Incoming Junior |
 
 ![Headstone Image](IMG_2669.jpeg)
 
@@ -11,11 +11,11 @@ A smart mirror is an innovative device that integrates a reflective surface with
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gzTWQ_Vz5Ec?si=cIwCwm37H_TQqw8V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Since my previous milestone, I managed to succesfully install and use the new 10.1" Screen Display, as well as incorporate the PIR motion sensor. Not only was I able to incorporate these modifications, but also I managed to use the motion sensor in a way that it can control the display's on/off state.
+Since my previous milestone, I managed to successfully install and use the new 10.1" Screen Display, as well as incorporate the PIR motion sensor. Not only was I able to incorporate these modifications, but I also managed to use the motion sensor in a way that it can control the display's on/off state.
 
-My biggest challenges with this project were probably trying to look for a case that would work with my setup, and also the installation process. I spent hours trying to search the internet to find a case that would work, but came up empty-handed. I had to resort to CAD software, which was my backup for if I couldn't find a case, however I believe this was a better option, as it allowed me to have complete customization over the case itself, and make it to my needs. 
+My biggest challenges with this project were probably trying to look for a case that would work with my setup, and also the installation process. I spent hours trying to search the internet to find a case that would work, but came up empty-handed. I had to resort to CAD software, which was my backup if I couldn't find a case; however, I believe this was a better option, as it allowed me to have complete customization over the case itself and make it to my needs. 
 
-Additionally, early on, I ran into a couple of issues when installing the MagicMirror OS onto my Raspberry Pi, as the Node.js version was incompatable with the setup program itself. Thankfully, there was a relatively simple solution by just installing Node.js manually.
+Additionally, early on, I ran into a couple of issues when installing the MagicMirror OS onto my Raspberry Pi, as the Node.js version was incompatible with the setup program itself. Thankfully, there was a relatively simple solution by just installing Node.js manually.
 
 BSE was very beneficial to me, as I gained an even better understanding of the implementation of programming with real electrical devices, as well as a better understanding of how different microcontrollers and embedded systems work. This project also showed me how there are so many different opportunities for customization and modifications on your prototype, and that it's up to you to create new innovative ideas.
 
